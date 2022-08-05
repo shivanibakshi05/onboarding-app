@@ -1,0 +1,83 @@
+.stepper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 30px;
+    position: relative;
+}
+
+.stepper .stepper-item {
+    list-style-type: none;
+    width: 15%;
+    position: relative;
+    text-align: center;
+}
+
+.stepper .stepper-item:before {
+    content: " ";
+    line-height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
+    background-color: white
+}
+
+.stepper .stepper-item:not(:last-child):after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 4px;
+    top: 11px;
+    left: 67%;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.stepper .stepper-item.active:before {
+    background-color: #664de6;
+    content: " ";
+    line-height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.stepper .stepper-item.active:not(:last-child):after {
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, #664de6 40%,#f8f8f8 40%);
+    border-image-slice: 1;
+}
+
+.line {
+    position: absolute;
+    top: 14.5%;
+    left: -33%;
+    width: 63%;
+    border: 1px solid #664de6;
+}
+  
+.stepper-title {
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 0.5rem;
+    position: absolute;
+    left: 46%;
+    top: 19%;
+}
+
+.stepper-title.active {
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 0.5rem;
+    position: absolute;
+    left: 46%;
+    top: 19%;
+    color: #FFFFFF;
+}
